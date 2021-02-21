@@ -4,6 +4,7 @@ gem 'rake'
 gem 'hanami',       '~> 1.3'
 gem 'hanami-model', '~> 1.3'
 
+gem 'multi_json'
 gem 'pg'
 gem 'rest-client'
 
@@ -24,6 +25,5 @@ group :test do
 end
 
 group :production do
-  # gem 'puma'
+  gem 'puma'
 end
-
