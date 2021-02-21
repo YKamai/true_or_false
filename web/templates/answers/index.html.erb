@@ -1,0 +1,32 @@
+<div id="description">
+  <p>Welcome to <b><%= app_name %></b> application.
+  Here you can check youself answering simple questions with True/False options.</p>
+</div>
+
+<div id='question_box'>
+<%= question['question'] %>
+
+  <div class="btn-group">
+  <%= answer_button true %>
+  <%= answer_button false %>
+  </div>
+</div>
+
+
+
+<% if answers.any?  %>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>User Result</th>
+  </tr>
+  <% answers.each do |answer| %>
+  <tr>
+    <td><%= answer.question %></td>
+    <td><%= answer.valid_answer %></td>
+    <td class="<%= answer.result.downcase %>"><%= answer.result %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>

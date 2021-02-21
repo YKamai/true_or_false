@@ -1,0 +1,3 @@
+project=true_or_false
+test=rspec
+template=erb
